@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuickPick</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <!-- START SCREEN -->
+  <div id="startScreen" class="start-screen">
+    <h2>Enter Playername</h2>
+    <input type="text" id="usernameInput" placeholder="Enter your name" />
+    <button id="startBtn">Start Game</button>
+  </div> 
+
+  <!-- LEVEL SELECTION -->
+ <!-- LEVEL SELECTION -->
+<div id="levelSelection" class="level-selection" style="display: none;">
+  <h2>Select Level</h2>
+  <div class="level-buttons">
+    <button class="level-btn" id="level1Btn" data-level="1">Level 1</button>
+    <button class="level-btn" id="level2Btn" data-level="2">Level 2</button>
+  </div>
+</div>
+
+  <!-- MAIN GAME -->
+  <div id="mainGame" style="display: none;">
+    <div id="menu">
+      <button id="homeBtn" class="anch"><i class="fas fa-home"></i> Home</button>
+     <!--<a class="anch"><i class="fas fa-info-circle"></i> About Us</a>
+      <a class="anch"><i class="fas fa-envelope"></i> Contact Us</a> -->
+    </div>
+
+    <h2 class="topheading">Make Your Best Choice</h2>
+
+    <div class="scoreboard">
+      <div class="player-box">
+        <h4 class="name"></h4>
+        <h5 class="score"></h5>
+      </div>
+      <div class="timer" id="timer">Time Left: 15s</div>
+      <div class="player-box">
+        <h4 class="oname"></h4>
+        <h5 class="oscore"></h5>
+      </div>
+    </div>
+
+    <div class="mainbox">
+      <div class="fruit"></div>
+      <div class="options-wrapper">
+        <div class="left-options">
+          <button id="a" class="option-button">No answer</button>
+          <button id="b" class="option-button">No answer</button>
+        </div>
+        <div class="right-options">
+          <button id="c" class="option-button">No answer</button>
+          <button id="d" class="option-button">No answer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULT SCREEN -->
+  <div id="resultScreen" style="display: none;">
+    <div id="resultContainer">
+      <h2 id="resultTitle"></h2>
+      <p id="resultMessage"></p>
+      <div id="resultStats">
+        <p id="finalScore"></p>
+        <p id="opponentScore"></p>
+      </div>
+      <button id="playAgainBtn">Play Again</button>
+      <button id="exitBtn">Exit</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="low" id="footer">
+    <hr style="width: 100%;" />
+    <div class="footer-icons">
+      <a href="tel:+918955774475" title="Call">
+        <img src="https://thumbs.dreamstime.com/b/contact-us-phone-icon-special-cyan-blue-square-button-isolated-reflected-abstract-illustration-90194278.jpg" alt="Call" height="60" />
+      </a>
+      <a href="mailto:patidarv336@gmail.com" title="Email">
+        <img src="images/email.png" alt="Email" height="60" />
+      </a>
+      <a href="https://www.linkedin.com/in/vijay-patidar-a07445303" target="_blank" title="LinkedIn">
+        <img src="images/linkedin.jpg" alt="LinkedIn" height="60" />
+      </a>
+      <a href="https://github.com/VijayPatidar354" target="_blank" title="GitHub">
+        <img src="images/git.png" alt="GitHub" height="60" />
+      </a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
